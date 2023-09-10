@@ -167,6 +167,7 @@ input[type=date] {
     input[type=text],
     input[type=number],
     input[type=email],
+    input[type=date],
     select {
         margin-bottom: 20px;
         font-size: 9px;
@@ -184,7 +185,8 @@ input[type=date] {
 
     .right input[type=text],
     input[type=number],
-    input[type=email] {
+    input[type=email],
+    input[type=date]{
         width: 100%;
     }
 
