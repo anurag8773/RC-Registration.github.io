@@ -1,107 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <div class="header">
+    <img src="images/6.png" alt="Header Image">
+    <h1>Robotics Club <span class="header-span">AKGEC</span></h1>
+</div>
     <div class="container">
-        <div class="left"></div>
-        <div class="right">
-            <form action="#">
-                <h2>Robotics Club <span>Registration</span></h2>
-                <label for="fullName">Full Name :</label>
-                <input type="text" id="fullName" name="fullName" placeholder="Enter Full Name" />
-                <br>
-                <label for="gender">Gender :</label>
-                <br>
-                <select name="gender" id="gender" required>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                </select>
-                <br>
-                <label>Date of Birth :</label>
-                <br>
-                <input type="date" name="DOB" id="DOB" placeholder="Enter your Date of Birth" required>
-                <br>
-                <label for="email">Email :</label>
-                <br>
-                <input type="email" id="email" name="email" placeholder="Enter your college Email I'd" required />
-                <br>
-                <label>Student No :</label>
-                <br>
-                <input type="number" name="studentNo" id="studentNo" placeholder="Enter your student number" required>
-                <br>
-                <label>Roll Number :</label>
-                <br>
-                <input type="number" name="RollNo" id="RollNo" placeholder="Enter your university roll number" required>
-                <br>
-                <label>Branch :</label>
-                <br>
-                <select name="branch" id="branch" aria-placeholder="Select your branch" required>
-                    <option value="CSE">CSE</option>
-                    <option value="CSE AIML">CSE AIML</option>
-                    <option value="CSE DS">CSE DS</option>
-                    <option value="CSE HINDI">CSE HINDI</option>
-                    <option value="AIML">AIML</option>
-                    <option value="CSIT">CSIT</option>
-                    <option value="IT">IT</option>
-                    <option value="ECE">ECE</option>
-                    <option value="EN">EN</option>
-                    <option value="CIVIL">CIVIL</option>
-                    <option value="ME">ME</option>
-                    <option value="OTHER">OTHER</option>
-                </select>
-                <br>
-                <label>Section :</label>
-                <br>
-                <select name="section" id="section" required>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                </select>
-                <br>
-                <label for="phoneNumber">Phone Number :</label>
-                <br>
-                <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" />
-                <br>
-
-                <label>Domain Preference :</label>
-                <br>
-                <select name="domain" id="domain" required>
-                    <option value="Fabrication">Fabrication</option>
-                    <option value="Electronics">Electronics</option>
-                    <option value="Programming">Programming</option>
-                    <option value="AIML">AI&ML</option>
-                </select>
-                <br>
-                <label for="project">Any Project Done :</label>
-                <input type="text" id="project" name="project" placeholder="If Yes, Kindly mention else write No" />
-                <br>
-                <label for="society">Are you part of other society? :</label>
-                <br>
-                <input type="text" id="society" name="society" placeholder="If Yes,Kindly mention else write No" />
-                <br>
-                <label>Stay :</label>
-                <br>
-                <select name="stay" id="stay" required>
-                    <option value="hostel">Hosteller</option>
-                    <option value="day-scholar">Day-Scholar</option>
-                </select>
-                <br>
-
-                <div class="form-submit-btn">
-                    <input type="submit" value="Register" class="submit">
-                </div>
-            </form>
-        </div>
+      <div class="left"></div>
+      <div class="right">
+        <form action="#">
+          <h2>Register</h2>
+          <label for="fullName">Full Name :</label>
+          <input type="text"
+                  id="fullName"
+                  name="fullName"
+                  placeholder="Enter Full Name"/>
+                            <br>
+                            <label for="gender">Gender :</label>
+                            <br>
+                      <select name="gender" id="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                      </select>
+                      <br>
+                      <label for="email" >Email :</label>
+                       <br>
+                        <input type="email"
+                                id="email"
+                                name="email" placeholder="Enter your college Email I'd" required/>
+                                <br>
+                                <label>Student No :</label>
+                             <br>
+                             <input type="number" name="studentNo" id="studentNo" placeholder="Enter your student number"  required>
+                             <br>
+                              <label>Branch :</label>
+                              <br>
+                        <select name="branch" id="branch" aria-placeholder="Select your branch" required>
+                          <option value="CSE">CSE</option>
+                          <option value="CSE AIML">CSE AIML</option>
+                          <option value="CSE DS">CSE DS</option>
+                          <option value="CS">CS</option>
+                          <option value="CSE HINDI">CSE HINDI</option>
+                          <option value="AIML">AIML</option>
+                          <option value="CSIT">CSIT</option>
+                          <option value="IT">IT</option>
+                          <option value="ECE">ECE</option>
+                          <option value="EN">EN</option>
+                          <option value="CIVIL">CIVIL</option>
+                          <option value="ME">ME</option>
+                       </select>
+                       <br>
+                       <label>Section :</label>
+                       <br>
+                       <select name="section" id="section" required>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                       </select>
+                       <br>
+                        <label for="phoneNumber">Phone Number (WhatsApp Number) :</label>
+                        <br>
+                        <input type="text"
+                                id="phoneNumber"
+                                name="phoneNumber" placeholder="Enter your phone number"/>
+                        <br>
+                       
+                             <label>Domain Preference :</label>
+                             <br>
+                             <select name="domain" id="domain" required>
+                                <option value="Fabrication">Fabrication</option>
+                                <option value="Electronics">Electronics</option>
+                                <option value="Programming">Programming</option>
+                                <option value="AIML">AI&ML</option>
+                             </select>
+                             <br>
+                             <label for="project">Any Projects :</label>
+                      <input type="text"
+                              id="project"
+                              name="project"
+                              placeholder="If Yes, Kindly mention else write No"/>
+                              <br>
+                              <label for="society">Are you part of other society? :</label>
+                              <br>
+                      <input type="text"
+                              id="society"
+                              name="society"
+                              placeholder="If Yes,Kindly mention else write No"/>
+                              <br>
+                             <label>Stay :</label>
+                             <br>
+                             <select name="stay" id="stay" required>
+                                <option value="hostel">Hosteller</option>
+                                <option value="day-scholar">Day-Scholar</option>
+                             </select>
+                             <br>
+                            
+                        <div class="form-submit-btn">
+                          <input type="submit" value="Register" class="submit">
+                        </div>         
+        </form>
+      </div>
     </div>
 </body>
-
 </html>
