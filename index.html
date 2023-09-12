@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registration Form</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
 </head>
 <body>
   <div class="header">
@@ -15,35 +16,35 @@
     <div class="container">
       <div class="left"></div>
       <div class="right">
-        <form action="#">
+        <form name="submit-to-google-sheet">
           <h2>Register</h2>
           <label for="fullName">Full Name :</label>
           <input type="text"
                   id="fullName"
-                  name="fullName"
+                  name="Name"
                   placeholder="Enter Full Name"/>
                             <br>
                             <label for="gender">Gender :</label>
                             <br>
-                      <select name="gender" id="gender" required>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="other">Other</option>
+                      <select name="Gender" id="gender" required>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
                       </select>
                       <br>
                       <label for="email" >Email :</label>
                        <br>
                         <input type="email"
                                 id="email"
-                                name="email" placeholder="Enter your college Email I'd" required/>
+                                name="Email" placeholder="Enter your college Email I'd" required/>
                                 <br>
                                 <label>Student No :</label>
                              <br>
-                             <input type="number" name="studentNo" id="studentNo" placeholder="Enter your student number"  required>
+                             <input type="number" name="StudentNo" id="studentNo" placeholder="Enter your student number"  required>
                              <br>
                               <label>Branch :</label>
                               <br>
-                        <select name="branch" id="branch" aria-placeholder="Select your branch" required>
+                        <select name="Branch" id="branch" aria-placeholder="Select your branch" required>
                           <option value="CSE">CSE</option>
                           <option value="CSE AIML">CSE AIML</option>
                           <option value="CSE DS">CSE DS</option>
@@ -60,7 +61,7 @@
                        <br>
                        <label>Section :</label>
                        <br>
-                       <select name="section" id="section" required>
+                       <select name="Section" id="section" required>
                           <option value="1">1</option>
                           <option value="2">2</option>
                           <option value="3">3</option>
@@ -70,12 +71,12 @@
                         <br>
                         <input type="text"
                                 id="phoneNumber"
-                                name="phoneNumber" placeholder="Enter your phone number"/>
+                                name="PhoneNumber" placeholder="Enter your phone number"/>
                         <br>
                        
                              <label>Domain Preference :</label>
                              <br>
-                             <select name="domain" id="domain" required>
+                             <select name="Domain" id="domain" required>
                                 <option value="Fabrication">Fabrication</option>
                                 <option value="Electronics">Electronics</option>
                                 <option value="Programming">Programming</option>
@@ -85,29 +86,56 @@
                              <label for="project">Any Projects :</label>
                       <input type="text"
                               id="project"
-                              name="project"
+                              name="AnyProject"
                               placeholder="If Yes, Kindly mention else write No"/>
                               <br>
                               <label for="society">Are you part of other society? :</label>
                               <br>
                       <input type="text"
                               id="society"
-                              name="society"
+                              name="PartOfSociety"
                               placeholder="If Yes,Kindly mention else write No"/>
                               <br>
                              <label>Stay :</label>
                              <br>
-                             <select name="stay" id="stay" required>
-                                <option value="hostel">Hosteller</option>
-                                <option value="day-scholar">Day-Scholar</option>
+                             <select name="Stay" id="stay" required>
+                                <option value="Hosteller">Hosteller</option>
+                                <option value="Day-scholar">Day-Scholar</option>
                              </select>
                              <br>
                             
-                        <div class="form-submit-btn">
-                          <input type="submit" value="Register" class="submit">
-                        </div>         
+                        <div class="form-submit-btn ">
+                          <input type="submit" value="Register" class="submit" >
+                        </div>   
+                        <span id="success">
+                        </span>    
         </form>
       </div>
     </div>
+
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxxtMir6pBsYYCeKHaz1i1Ol9Q2_03fFal0tCCrXlh8Z4nPoxZBKmP_H-nG6IP5skq9/exec'
+      const form = document.forms['submit-to-google-sheet']
+      const success = document.getElementById('success')
+      const theButton = document.querySelector(".submit");
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            success.innerHTML="data successfully submitted";
+            setTimeout(function(){
+              success.innerHTML="";
+            },5000)
+            form.reset();
+          })
+          .catch(error => console.error('Error!', error.message))
+      })
+      //     function myFunc(){
+      // window.open("http://127.0.0.1:5500/login%20page/demo2.html");
+      //     }
+      
+    </script>
 </body>
 </html>
